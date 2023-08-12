@@ -1,0 +1,95 @@
+@media only screen and (min-width:0px) {
+    .am {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profilePic {
+        width: 175px;
+    }
+
+    .textAboutMe {
+        color: #000;
+        font-family: Exo 2;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+    }
+
+}
+
+
+@media only screen and (min-width:430px) {
+    .am {
+        width: 75vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profilePic {
+        width: 250px;
+    }
+
+    .textAboutMe {
+        color: #000;
+        font-family: Exo 2;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+}
+
+@media only screen and (min-width:650px) {
+    .am {
+        width: 75vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profilePic {
+        width: 400px;
+    }
+
+    .textAboutMe {
+        color: #000;
+        font-family: Exo 2;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 38px;
+    }
+
+}
+
+@media only screen and (min-width:1024px) {
+
+    .am {
+        width: 75vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .profilePic {
+        width: 300px;
+    }
+
+    .textAboutMe {
+        color: #000;
+        font-family: Exo 2;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+
+}

@@ -1,0 +1,206 @@
+@media only screen and (min-width:0px) {
+    .nav {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #logoPic {
+        width: 75px;
+
+    }
+
+    .Name {
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .burger {
+        display: block;
+        width: 75px;
+    }
+
+    .container {
+        display: none;
+    }
+
+
+    .Contact,
+    .Home {
+        display: none;
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        background-color: white;
+        border: none;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (min-width:430px) {
+    .nav {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #logoPic {
+        width: 75px;
+
+    }
+
+    .Name {
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .burger {
+        display: block;
+        width: 75px;
+    }
+
+    .container {
+        display: none;
+    }
+
+
+    .Contact,
+    .Home {
+        display: none;
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        background-color: white;
+        border: none;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (min-width:650px) {
+    .nav {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #logoPic {
+        width: 100px;
+
+    }
+
+    .Name {
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .burger {
+        display: block;
+        width: 100px;
+    }
+
+    .container {
+        display: none;
+    }
+
+
+    .Contact,
+    .Home {
+        display: none;
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        background-color: white;
+        border: none;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+}
+
+@media only screen and (min-width:1024px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 150px;
+        margin-right: 20px;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .nav {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #logoPic {
+        width: 100px;
+
+    }
+
+    .Name {
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+
+
+    .Contact,
+    .Home {
+        display: block;
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        background-color: white;
+        border: none;
+    }
+}

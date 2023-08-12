@@ -1,0 +1,327 @@
+@media only screen and (min-width:0px) {
+    .post {
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pic {
+        width: 130px;
+    }
+
+    .Heading {
+        color: #000;
+        font-family: Exo;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .subHeading {
+        width: 100%;
+        color: #B5B5B5;
+        font-family: Work Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .date {
+        color: #000;
+        font-family: PT Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .Tags {
+        margin-top: 5px;
+        width: 110px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .tag {
+        width: 50px;
+        background: #D9D9D9;
+        border-radius: 50px;
+        color: #000;
+        text-align: center;
+        font-family: PT Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .line {
+        height: 1px;
+        width: 60vw;
+        background: #BABABA;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .complete {
+        display: block;
+        flex-direction: column;
+
+    }
+}
+
+
+@media only screen and (min-width:430px) {
+    .post {
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pic {
+        width: 175px;
+    }
+
+    .Heading {
+        color: #000;
+        font-family: Exo;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .subHeading {
+        width: 100%;
+        color: #B5B5B5;
+        font-family: Work Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .date {
+        color: #000;
+        font-family: PT Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .Tags {
+        width: 130px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .tag {
+        width: 60px;
+        background: #D9D9D9;
+        border-radius: 50px;
+        color: #000;
+        text-align: center;
+        font-family: PT Sans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .line {
+        height: 1px;
+        width: 60vw;
+        background: #BABABA;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .complete {
+        display: block;
+        flex-direction: column;
+
+    }
+}
+
+
+@media only screen and (min-width:650px) {
+    .post {
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pic {
+        width: 200px;
+    }
+
+    .Heading {
+        color: #000;
+        font-family: Exo;
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .subHeading {
+        width: 90%;
+        color: #B5B5B5;
+        font-family: Work Sans;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .date {
+        color: #000;
+        font-family: PT Sans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .Tags {
+        width: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .tag {
+        width: 86px;
+        background: #D9D9D9;
+        border-radius: 50px;
+        color: #000;
+        text-align: center;
+        font-family: PT Sans;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .line {
+        height: 1px;
+        width: 60vw;
+        background: #BABABA;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .complete {
+        display: block;
+        flex-direction: column;
+
+    }
+}
+
+
+@media only screen and (min-width:1024px) {
+    .post {
+        width: 60vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pic {
+        width: 200px;
+    }
+
+    .Heading {
+        color: #000;
+        font-family: Exo;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .subHeading {
+        width: 50%;
+        color: #B5B5B5;
+        font-family: Work Sans;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .date {
+        color: #000;
+        font-family: PT Sans;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .Tags {
+        width: 230px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .tag {
+        width: 90px;
+        background: #D9D9D9;
+        border-radius: 50px;
+        color: #000;
+        text-align: center;
+        font-family: PT Sans;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .line {
+        height: 1px;
+        width: 60vw;
+        background: #BABABA;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .complete {
+        display: block;
+        flex-direction: column;
+
+    }
+}
