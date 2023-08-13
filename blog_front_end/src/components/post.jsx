@@ -1,28 +1,30 @@
 import React from "react"
 import './post.css';
 
-function post(props) {
-    const { logo, baseURL, endpoint } = props;
+function post({ logo, baseURL, endpoint, heading, subHeading, date, tags }) {
     return (
         <div className="complete">
-            <div className="post">
-                <div className="content">
-                    <div className="Heading">Heading</div>
-                    <div className="subHeading">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            <a href="" className="postRedirect">
+                <div className="post">
+                    <div className="content">
+                        <div className="Heading">{heading}</div>
+                        <div className="subHeading">
+                            {subHeading}
+                        </div>
+                        <div className="date">{date}</div>
+                        <div className="Tags">
+                            {
+                                tags.map(t => <div className="tag">{t}</div>)
+                            }
+                        </div>
                     </div>
-                    <div className="date">08/08/2023</div>
-                    <div className="Tags">
-                        <div className="tag">Tag</div>
-                        <div className="tag">Tag</div>
+                    <div className="postPic">
+                        <img src={logo} className="pic" />
                     </div>
-                </div>
-                <div className="postPic">
-                    <img src={logo} className="pic" />
-                </div>
 
-            </div>
-            <div className="line"></div>
+                </div>
+                <div className="line"></div>
+            </a>
         </div>
     );
 }
