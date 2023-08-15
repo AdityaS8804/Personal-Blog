@@ -29,35 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 CORS_ALLOW_ALL_ORIGINS = True
-'''
-CORS_ALLOW_ORIGINS = [
-    "http://localhost:3000",
-    "http://*"
-]
-CORS_ALLOW_PRIVATE_NETWORK = True
-CORS_ALLOW_HEADERS = (
-    "accept",
-    "authorization",
-    "content-type",
-    "user-agent",
-    "x-csrftoken",
-    "x-requested-with",
-    *default_headers
-)
-
-CORS_ALLOW_HEADERS = (
-    *default_headers,
-)
-
-CORS_ALLOW_PRIVATE_NETWORK = True
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",
-]
-'''
 
 # Application definition
 
@@ -147,7 +118,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = "/api/static/"
-MEDIA_URL = "media/"
+MEDIA_URL = "api/media/"
 MEDIA_ROOT = BASE_DIR/"api/media/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

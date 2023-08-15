@@ -2,6 +2,10 @@ import React from "react"
 import './post.css';
 
 function post({ logo, baseURL, endpoint, heading, subHeading, date, tags }) {
+    const picLink = (baseURL + logo).split('/').filter((a, b) => {
+        return a !== '' || baseURL.split('/')[b - 1] === 'http:' || baseURL.split('/')[b - 1] === 'https:';
+    }).join('/')
+    console.log(picLink)
     return (
         <div className="complete">
             <a href="" className="postRedirect">
@@ -19,7 +23,7 @@ function post({ logo, baseURL, endpoint, heading, subHeading, date, tags }) {
                         </div>
                     </div>
                     <div className="postPic">
-                        <img src={logo} className="pic" />
+                        <img src={picLink} className="pic" />
                     </div>
 
                 </div>

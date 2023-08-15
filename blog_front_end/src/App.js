@@ -9,9 +9,9 @@ function App() {
   const [posts, setPosts] = useState([])
   //const baseURL = "https://adityas8804.github.io/Data/"
   const baseURL = "http://127.0.0.1:8000/api/"
-  /*
+  const baseURL2 = "http://127.0.0.1:8000/"
   useEffect(() => {
-    fetch(baseURL + "posts.json").then(data => data.json()).then(d => {
+    fetch(baseURL2 + "api/posts/").then(data => data.json()).then(d => {
       setPosts((p) => {
         let newPosts = []
         for (const key in d) {
@@ -25,7 +25,6 @@ function App() {
     })
   }
     , [])
-    */
 
   return (
     <section className="hero">
@@ -35,7 +34,7 @@ function App() {
       <div className="line2" />
       {
         posts.map((element) => {
-          return <Post logo={element.MainPic} baseURL={baseURL} endpoint={"posts/" + element} heading={element.heading} subHeading={element[`sub - heading`]} date={element.date} tags={element.tags ? element.tags : []} />
+          return <Post logo={element.logo} baseURL={baseURL2} endpoint={"api/posts/" + element} heading={element.heading} subHeading={element[`sub - heading`]} date={element.date} tags={element.tags ? element.tags : []} />
         })
       }
       <Footer baseURL={baseURL} endpoint="" />

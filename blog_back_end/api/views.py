@@ -22,3 +22,29 @@ def aboutMe(request):
         return Response({
             "Exception": str(e)
         }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(['GET'])
+def postsHomePage(request):
+    try:
+        posts = {}
+        me = models.PostModel.objects.all()
+        tags = []
+        for x in me:
+            tagsQ = x.tags.all()
+            for i in tagsQ:
+                tags.append(i.tag)
+            img = models.ImagesModel.objects.get(post__id=x.id)
+            posts[x.id] = {
+                "heading": x.heading,
+                "sub-heading": x.subHeading,
+                "date": x.date,
+                "tags": tags,
+                "logo": img.mainPic.image.url,
+            }
+            tags = []
+        return Response(posts, status=status.HTTP_200_OK)
+    except Exception as e:
+        return Response({
+            'Exception': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

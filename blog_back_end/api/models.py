@@ -24,9 +24,12 @@ class PostModel(models.Model):
 
 
 class imageModel(models.Model):
-    image = models.ImageField()
+    image = models.ImageField(upload_to='api/', default="")
 
 
 class ImagesModel(models.Model):
-    post_id = models.IntegerField()
-    images = models.ForeignKey(imageModel, on_delete=models.PROTECT)
+    post = models.OneToOneField(
+        PostModel, on_delete=models.CASCADE, default="")
+    images = models.ManyToManyField(
+        imageModel, default="",related_name="post_images") 
+    mainPic=models.ForeignKey(imageModel,on_delete=models.CASCADE, default="")    
