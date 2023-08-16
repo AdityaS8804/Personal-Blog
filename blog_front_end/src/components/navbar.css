@@ -29,6 +29,7 @@
 
     .container {
         display: none;
+
     }
 
 
@@ -158,7 +159,7 @@
         flex-direction: row;
         justify-content: space-between;
         width: 150px;
-        margin-right: 20px;
+        margin-right: 40px;
     }
 
     .burger {

@@ -10,6 +10,12 @@ function App() {
   //const baseURL = "https://adityas8804.github.io/Data/"
   const baseURL = "http://127.0.0.1:8000/api/"
   const baseURL2 = "http://127.0.0.1:8000/"
+  const [content, setContent] = useState('');
+  const [profilePic, setProfilePic] = useState('');
+  const [emailID, setEmailID] = useState('');
+  const [igURL, setIgURL] = useState('');
+  const [twitterURL, setTwitterURL] = useState('');
+  const [linkdinURL, setLinkldinURL] = useState('');
   useEffect(() => {
     fetch(baseURL2 + "api/posts/").then(data => data.json()).then(d => {
       setPosts((p) => {
@@ -23,6 +29,16 @@ function App() {
         return p.concat(newPosts)
       })
     })
+    fetch(baseURL + 'aboutme/').then(data => data.json()).then(d => {
+      setContent((_) => d.body)
+      setEmailID((_) => d.email_id)
+      setIgURL((_) => d.ig_url)
+      setTwitterURL((_) => d.twitterURL)
+      setLinkldinURL((_) => d.linkdinURL)
+      setProfilePic((_) => (baseURL.split('/').filter((a, b) => (a !== 'api' && (a !== '' || baseURL.split('/')[b - 1] === 'http:' || baseURL.split('/')[b - 1] === 'https:'))).join('/') + d.logo))
+    }).catch((e) => {
+      console.log(e)
+    })
   }
     , [])
 
@@ -30,14 +46,14 @@ function App() {
     <section className="hero">
       <Nav baseURL={baseURL} endpoint="" />
       <div className="line" />
-      <AboutMe logo={logo} baseURL={baseURL} endpoint="aboutme/" />
+      <AboutMe logo={logo} baseURL={baseURL} endpoint="aboutme/" content={content} profilePic={profilePic} />
       <div className="line2" />
       {
         posts.map((element) => {
           return <Post logo={element.logo} baseURL={baseURL2} endpoint={"api/posts/" + element} heading={element.heading} subHeading={element[`sub - heading`]} date={element.date} tags={element.tags ? element.tags : []} />
         })
       }
-      <Footer baseURL={baseURL} endpoint="" />
+      <Footer emailID={emailID} igURL={igURL} twitterURL={twitterURL} linkdinURL={linkdinURL} />
     </section>
   );
 }
