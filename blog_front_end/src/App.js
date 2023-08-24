@@ -4,6 +4,10 @@ import Nav from "./components/navbar.jsx";
 import AboutMe from "./components/aboutme.jsx";
 import Post from "./components/post.jsx";
 import Footer from './components/footer.jsx'
+import Home from "./components/home.jsx"
+import P from "./components/p.jsx"
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 function App() {
   const [posts, setPosts] = useState([])
@@ -16,6 +20,7 @@ function App() {
   const [igURL, setIgURL] = useState('');
   const [twitterURL, setTwitterURL] = useState('');
   const [linkdinURL, setLinkldinURL] = useState('');
+  const [id, setId] = useState([])
   useEffect(() => {
     fetch(baseURL2 + "api/posts/").then(data => data.json()).then(d => {
       setPosts((p) => {
@@ -25,8 +30,14 @@ function App() {
           newPosts.push(
             d[key])
         }
-        console.log(p.concat(newPosts))
         return p.concat(newPosts)
+      })
+      setId((_) => {
+        let i = []
+        for (const j in d) {
+          i.push(j)
+        }
+        return i
       })
     })
     fetch(baseURL + 'aboutme/').then(data => data.json()).then(d => {
@@ -46,13 +57,16 @@ function App() {
     <section className="hero">
       <Nav baseURL={baseURL} endpoint="" />
       <div className="line" />
-      <AboutMe logo={logo} baseURL={baseURL} endpoint="aboutme/" content={content} profilePic={profilePic} />
-      <div className="line2" />
-      {
-        posts.map((element) => {
-          return <Post logo={element.logo} baseURL={baseURL2} endpoint={"api/posts/" + element} heading={element.heading} subHeading={element[`sub - heading`]} date={element.date} tags={element.tags ? element.tags : []} />
-        })
-      }
+      <Router>
+        <Routes>
+          <Route path="/" element={
+            <Home logo={logo} baseURL={baseURL} content={content} profilePic={profilePic} posts={posts} baseURL2={baseURL2} id={id} />
+          } />
+          <Route path="" />
+          <Route path="/1" element={<P />}>
+          </Route>
+        </Routes>
+      </Router>
       <Footer emailID={emailID} igURL={igURL} twitterURL={twitterURL} linkdinURL={linkdinURL} />
     </section>
   );

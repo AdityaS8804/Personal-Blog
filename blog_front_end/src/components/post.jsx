@@ -1,14 +1,14 @@
 import React from "react"
 import './post.css';
-
-function post({ logo, baseURL, endpoint, heading, subHeading, date, tags }) {
+import { BrowserRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom'
+function post({ logo, baseURL, endpoint, heading, subHeading, date, tags, id }) {
     const picLink = (baseURL + logo).split('/').filter((a, b) => {
         return a !== '' || baseURL.split('/')[b - 1] === 'http:' || baseURL.split('/')[b - 1] === 'https:';
     }).join('/')
     console.log(picLink)
     return (
         <div className="complete">
-            <a href="" className="postRedirect">
+            <Link to={`/${id}`} className="postRedirect">
                 <div className="post">
                     <div className="content">
                         <div className="Heading">{heading}</div>
@@ -28,7 +28,7 @@ function post({ logo, baseURL, endpoint, heading, subHeading, date, tags }) {
 
                 </div>
                 <div className="line"></div>
-            </a>
+            </Link>
         </div>
     );
 }

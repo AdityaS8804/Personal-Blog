@@ -48,3 +48,20 @@ def postsHomePage(request):
         return Response({
             'Exception': str(e)
         }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+@api_view(['GET'])
+def post(request,id):
+    posts={}
+    l=[]
+    try:
+        p=models.PostModel.objects.get(id=id)
+        imgs=models.ImagesModel.objects.get(post__id=id)
+        for i in imgs.images.all():
+            l.append(i.image.url)
+        posts['content']=p.content
+        posts['images']=l
+        return Response(posts, status=status.HTTP_200_OK)
+
+    except Exception as e:
+        return Response({
+            "Exception" : str(e)
+        },status=status.HTTP_500_INTERNAL_SERVER_ERROR)
